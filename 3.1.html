@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final task 3.1</title>
+</head>
+
+<script>
+    function Order()
+    {
+        item = document.getElementById("items").value;
+        product = "15.97";
+        cost = parseFloat(product)*parseFloat(item);
+        document.getElementById("itemcost").innerHTML = "$" + cost.toFixed(2);
+        ship = "4.99";
+        tbefore = parseFloat(cost)+parseFloat(ship);
+        document.getElementById("totalbefore").innerHTML = "$" + tbefore.toFixed(2);
+        tax = Math.round(parseFloat(tbefore)*10)/100;
+        document.getElementById("tax").innerHTML = "$" + tax.toFixed(2);
+        total = parseFloat(tbefore)+parseFloat(tax);
+        document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+    }
+</script>
+<body>
+    <p style="display:inline-block">Items: </p>
+    <input type="text" size="10" id="items">
+    <input type="button" value="Enter" onclick="Order()">
+    <br>
+    <p style="display:inline-block;width:250px;">Shipping and Handling: </p>
+        <p id="ship" style="display:inline-block">$4.99</p>
+
+    <div>
+        <h4>Order Summary</h4>
+        <p style="display:inline-block;width:250px;">Items(): </p>
+        <p id="itemcost" style="display:inline-block">$0.00</p>
+        <p style="display:block;margin:0px;"></p>
+        
+        <p style="display:block;margin:0px;"></p>
+        <p style="display:inline-block;width:250px;">Total before tax: </p>
+        <p id="totalbefore" style="display:inline-block">$0.00</p>
+        <p style="display:block;margin:0px;"></p>
+        <p style="display:inline-block;width:250px;">Estimated tax(10%): </p>
+        <p id="tax" style="display:inline-block">$0.00</p>
+        <p style="display:block;margin:0px;"></p>
+        <hr>
+        <p style="display:inline-block;width:250px;font-weight: bold;color: red;">Order Total: </p>
+        <p id="total" style="display:inline-block;font-weight: bold;color: red;">$0.00</p>
+
+    </div>
+
+</body>
+</html>

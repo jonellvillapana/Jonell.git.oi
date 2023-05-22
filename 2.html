@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final task 3</title>
+</head>
+<script>
+    function total(){
+
+        shirt = "10";
+        document.getElementById("tshirt").innerHTML = "T-shirt: $" + shirt;
+
+        socks = "8";
+        document.getElementById("socks").innerHTML = "Socks: $" + socks;
+        
+        dinner = "20";
+        document.getElementById("dinner").innerHTML = "Dinner: $" + dinner;
+
+        total = parseInt(shirt) + parseInt(socks) + parseInt(dinner);
+        document.getElementById("total").innerHTML = "Order Total: $" + total;
+        
+    }
+    function totbal()
+    {
+        balance = "100";
+        lunch = "20";
+        dinner = "50";
+        earnings= "200";
+
+        totbal = parseInt(balance) - parseInt(lunch) - parseInt(dinner) + parseInt(earnings);
+
+        document.getElementById("totbal").innerHTML = "Total Balance: $" + totbal;
+
+    }
+</script>
+<body>
+    <div>
+    <h3>1h.</h3>
+    <p id="tshirt">T-shirt: $10</p>
+    <p id="socks">Socks: $8</p>
+    <p id="dinner">Dinner: $20</p>
+    <input type="button" value="Total" onclick="total()">
+    <p style="font-weight: bold;" id=total> </p>
+    </div>
+
+    <br>
+    
+    <div>
+        <h3>1i.</h3>
+        <p style="font-weight: bold;">Balance</p>
+        <p id="balance">Balance: $100</p>
+        <p style="font-weight: bold;">Expenses</p>
+        <p id="lunch">Lunch: $20</p>
+        <p id="dinner">Dinner: $50</p>
+        <p style="font-weight: bold;">Earnings </p>
+        <p id="earnings">Earnings: $200</p>
+        <input type="button" value="Total Balance" onclick="totbal()">
+        <p style="font-weight: bold; color: red;" id="totbal" >Total Balance:</p>
+    </div>
+</body>
+</html>
